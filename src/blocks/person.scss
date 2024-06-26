@@ -77,7 +77,8 @@
   &:hover {
     background-color: #EEEEEE;
     transform: scale(1.2);
-   
+    z-index: 10;
+
     .person__details--extra {
       visibility: visible;
     }
