@@ -1,0 +1,41 @@
+html {
+  font-family: Arial;
+}
+
+.people {
+  flex-wrap: wrap;
+  gap: 40px 30px;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.person {
+  position: relative;
+}
+
+.person__photo {
+  flex-wrap: wrap;
+  width: 200px;
+  display: flex;
+}
+
+.person__photo--rank {
+  color: #8b0000;
+  text-align: center;
+  size: 16px;
+  background-color: #fff;
+  border-radius: 200px;
+  align-content: center;
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 84px;
+  right: 10px;
+}
+
+.person__photo img {
+  border-radius: 200px;
+  width: 200px;
+}
+/*# sourceMappingURL=index.b1276d39.css.map */
