@@ -75,7 +75,22 @@ body {
     }
 
     &--extra {
+      display: block;
+      size: 18px;
+      text-align: center;
       visibility: hidden;
+    }
+
+    &--sport::after {
+      content: ', ';
+    }
+
+    &--pay::after {
+      content: 'M';
+    }
+
+    &--pay::before {
+      content: '$';
     }
   }
 
