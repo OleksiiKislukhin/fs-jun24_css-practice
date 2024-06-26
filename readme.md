@@ -18,3 +18,6 @@ When done
 - make sure to `commit`, `push` and `deploy`
 - check that your Demo Page works as expected
 - Send a link to your deployed page to the coach 
+
+test link 
+"https://oleksiikislukhin.github.io/fs-jun24_css-practice_oleksii_kislukhin/"
