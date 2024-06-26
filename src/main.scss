@@ -1,21 +1,32 @@
 $rank-color: #8B0000;
 $img-width: 200px;
 $img-rank-width: 32px;
+$text-color-name: #2F4F4F;
+$person-padding: 10px;
 
 html {
   font-family: Arial;
 }
 
-.people {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 40px 30px;
+body {
   margin: 0;
   padding: 0;
 }
 
+.people {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px 10px;
+  padding: 20px 25px;
+  margin: 0;
+}
+
 .person {
   position: relative;
+
+  padding: 10px;
+  transition: transform 1s;
 
   &__photo {
     display: flex;
@@ -29,20 +40,55 @@ html {
       color: $rank-color;
       background-color: #fff;
       border-radius: 200px;
-      text-align: center;
       size: 16px;
+      text-align: center;
       align-content: center;
 
-
       position: absolute;
-      right: 10px;
-      top: ($img-width - $img-rank-width) / 2;
+      right: 10px + $person-padding;
+      top: ($img-width - $img-rank-width) / 2 + $person-padding;
+    }
+
+    &--img {
+      width: 200px;
+      border-radius: 200px;
+
+      transition: border-radius 1s ;
     }
   }
 
-  &__photo img {
-    width: 200px;
-    border-radius: 200px;
-  }
   
+  &__details {
+    display: block;
+    justify-items: center;
+    align-content: center;
+
+    margin: 0;
+    margin-top: 8px;
+
+    &--name {
+      display: block;
+      color: $text-color-name;
+      text-align: center;  
+      size: 20px;
+      line-height: 23px;
+    }
+
+    &--extra {
+      visibility: hidden;
+    }
+  }
+
+  &:hover {
+    background-color: #EEEEEE;
+    transform: scale(1.2);
+   
+    .person__details--extra {
+      visibility: visible;
+    }
+
+    .person__photo--img {
+      border-radius: 60px;
+    }
+  }
 }
