@@ -1,8 +1,4 @@
-$rank-color: #8B0000;
-$img-width: 200px;
-$img-rank-width: 32px;
-$text-color-name: #2F4F4F;
-
+@import './utils/variables';
 @import './blocks/person';
 
 html {
@@ -15,12 +11,18 @@ body {
 }
 
 .people {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(2, $person-width);
+  justify-content: center;
+  justify-items: center;
 
   gap: 20px 10px;
   padding: 20px 25px;
   margin: 0;
+
+  @media (min-width: 1000px) {
+    grid-template-columns: repeat(4, $person-width);
+  }
 }
 
 

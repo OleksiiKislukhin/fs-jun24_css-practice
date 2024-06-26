@@ -1,5 +1,5 @@
 .person {
-  padding: 10px;
+  padding: $person-padding;
   transition: transform 1s;
 
   &__photo {
