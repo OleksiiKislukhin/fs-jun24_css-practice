@@ -1,0 +1,89 @@
+.person {
+  padding: 10px;
+  transition: transform 1s;
+
+  &__photo {
+    position: relative;
+    display: flex;
+    width: $img-width;
+
+    &--rank {
+      width: $img-rank-width;
+      height: $img-rank-width;
+      
+      color: $rank-color;
+      background-color: #fff;
+      border-radius: 200px;
+      size: 16px;
+      text-align: center;
+      align-content: center;
+
+      position: absolute;
+      right: 10px;
+      top: ($img-width - $img-rank-width) / 2;
+    }
+
+    &--img {
+      width: 200px;
+      border-radius: 200px;
+
+      transition: border-radius 1s;
+    }
+  }
+
+  
+  &__details {
+    display: block;
+    justify-items: center;
+    align-content: center;
+
+    
+
+    &--name {
+      display: block;
+      margin: 0;
+      margin-top: 8px;
+      
+      color: $text-color-name;
+      text-align: center;  
+      size: 20px;
+      line-height: 23px;
+    }
+    
+    &--extra {
+      display: block;
+      margin: 0;
+      margin-top: 9px;
+
+      size: 18px;
+      line-height: 21px;
+      text-align: center;
+      visibility: hidden;
+    }
+
+    &--sport::after {
+      content: ', ';
+    }
+
+    &--pay::after {
+      content: 'M';
+    }
+
+    &--pay::before {
+      content: '$';
+    }
+  }
+
+  &:hover {
+    background-color: #EEEEEE;
+    transform: scale(1.2);
+   
+    .person__details--extra {
+      visibility: visible;
+    }
+
+    .person__photo--img {
+      border-radius: 60px;
+    }
+  }
+}
